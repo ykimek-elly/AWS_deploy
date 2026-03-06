@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>파일명: product.html</title>
+</head>
+<body>
+
+	<h2>실시간 AI 채팅</h2>
+	
+	<!-- form으로 전송하고 싶을 경우에는 name속성 작성 -->
+	<input type="text" id="msgInput"
+			placeholder="질문을 입력하세요"
+			name ="msgInput"
+			size="50"/>
+	<button onclick="sendMsg()">전송</button>
+	
+	<hr/>
+	<div id="result"
+	     th:text="${result}"></div>
+
+	<script>
+		function sendMsg(){
+			// 1. 태그 값 가져오기
+			const input = document.getElementById('msgInput');
+			const result = document.getElementById('result');
+			const msg = input.value.trim();
+			
+			// 2. 서버로 전송! 
+			//   인코딩 문제가 생길 수있다!
+			
+			
+		}		
+	</script>
+
+</body>
+</html>

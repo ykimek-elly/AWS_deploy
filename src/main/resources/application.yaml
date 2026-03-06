@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: springAi2
+
+  # ================================
+  # MySQL 연결 설정
+  # ================================
+  datasource:
+    url: jdbc:mysql://localhost:3306/chatbot_db?serverTimezone=Asia/Seoul
+    username: root
+    password: 772100kk
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # ================================
+  # JPA 설정
+  # ================================
+  jpa:
+    hibernate:
+      ddl-auto: update        # 서버 실행 시 테이블 자동 생성/수정
+    show-sql: true            # 실행되는 SQL 콘솔에 출력
+    properties:
+      hibernate:
+        format_sql: true      # SQL 보기 좋게 출력
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  ai:
+    google:
+      genai:
+        api-key: AIzaSyD0qKaC_u1iYYl4UqyO998L4a6DgXW62lA
+        chat:
+          options:
+            model: gemini-2.5-flash-lite

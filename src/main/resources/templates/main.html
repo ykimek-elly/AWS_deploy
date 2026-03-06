@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>main.html</title>
+</head>
+<body>
+	<h2>재미니 메인!</h2>
+	
+	<!--  style="white-space: pre-line;
+		  재미니한테 받아온 데이터를 줄바꿈을 화면에 그대로 
+	      보여주기 위한 CSS 속성! 
+	      공백은 일반 HTML처럼 표시 하고 줄바꿈은 그대로 
+	      줄바꾸는 걸로 표시한다. -->
+	<p th:text="${result}" 
+	   style="white-space: pre-line;"></p>
+	
+</body>
+</html>
